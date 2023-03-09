@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Blockchain-Network&fontAlignY=40&fontSize=100&desc=&descAlignY=65&animation=twinkling)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Blockchain-Net&fontAlignY=40&fontSize=100&desc=&descAlignY=65&animation=twinkling)
 
 # 블록체인 네트워크 정리
 ## - Geth란?
@@ -64,24 +64,24 @@ web3.eth.sendTransaction({from:"0x~~~", to:"0x~~~", value:"0x~~~"});
 
 # 트랜잭션을 보내기 위한 네트워크 접근 방식 
 ## 1. 블록체인 네트워크에 바로 접근
+- Geth attach 등등
 ```mermaid
 flowchart
 A[FrontEnd, BackEnd, Terminal]
 B[Geth, Ganache]
 A --> B
 ```
-- Geth attach 등등
 
 ## 2. Matamask를 사용하여 접근
+```js
+const web3 = new Web3(window.ethereum);
+```
 ```mermaid
 flowchart
 A[FrontEnd]
 B[MetaMask]
 C[Ganache, Geth]
 A --> B --> C
-```
-```js
-const web3 = new Web3(window.ethereum);
 ```
 
 ## 3. BachEnd 서버를 사용하여 접근
