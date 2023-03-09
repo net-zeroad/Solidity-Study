@@ -3,7 +3,7 @@
 # Solidity란?
 - 스마트 컨트랙트 프로그래밍 언어로, 컴파일하여 *ByteCode를 생성한다.
 - ByteCode : 트랜잭션의 data로 저장되며, 스마트 컨트랙트 실행 시 사용된다.
-
+<br/><br/>
 
 # Solidity Prettier 설정방법
 0. solidity 확장 프로그램 설치(검정색 버전)
@@ -11,6 +11,7 @@
    "prettier.documentSelectors": ["**/*.sol"]
 2. 프로젝트에 플러그인 설치
    npm i -D prettier-plugin-solidity
+<br/><br/>
 
 
 # Solidity 코드를 컴파일하는 방법
@@ -18,10 +19,12 @@
    npm i solc
 2. 컴파일 명령어 실행
    npx solc --bin --abi ./test.sol
+<br/><br/>
 
 
 # Solidity의 자료형
 https://merrily-code.tistory.com/97
+<br/><br/>
 
 
 # Solidity의 개념 - 컨트랙트
@@ -33,12 +36,14 @@ https://merrily-code.tistory.com/97
 	contract HelloWorld {
 
 	}
+<br/><br/>
 
 
 # Solidity의 개념 - License
 - 컨트랙트 파일에서 라이선스 표기는 필수라고 한다.
 - 최상단에 어떤 라이센스를 사용하는지 적어준다.
 	// SPDX-License-Identifier: MIT
+<br/><br/>
 
 
 # Solidity의 개념 - Version Pragma
@@ -47,6 +52,7 @@ https://merrily-code.tistory.com/97
   이를 통해 이후에 새로운 컴파일러 버전이 나와도 기존 코드가 깨지지 않도록 예방한다.
 - Version Pragma를 선언하는 방법
 	pragma solidity ^0.8.15;
+<br/><br/>
 
 
 # Solidity의 개념 - 변수
@@ -57,6 +63,7 @@ https://merrily-code.tistory.com/97
   string name;
 - 타입의 종류 : 웬만하면 uint를 사용한다.
   int(int256), uint(uint256), uint8, uint16, uint32와 같이 uint를 더 적은 비트로 선언할 수도 있다.
+<br/><br/>
 
 
 # Solidity의 개념 - 구조체
@@ -66,6 +73,7 @@ https://merrily-code.tistory.com/97
 	    uint age;
 	    string name;
 	}
+<br/><br/>
 
 
 # Solidity의 개념 - 배열
@@ -82,6 +90,7 @@ https://merrily-code.tistory.com/97
 	Person[] people;
 - public 배열 : public으로 배열을 선언할 수 있으며 솔리디티는 이런 배열을 위해 getter 메소드를 자동 생성해준다.
 	Person[] public people;
+<br/><br/>
 
 
 # Solidity의 개념 - 구조체와 배열의 활용
@@ -91,6 +100,7 @@ https://merrily-code.tistory.com/97
 	people.push(satoshi);
 - 위 두 내용을 아래와 같이 한 줄로 표현할 수도 있다.
 	people.push(Person(16, "Vitalik"));
+<br/><br/>
 
 
 # Solidity의 개념 - 함수
@@ -109,6 +119,7 @@ https://merrily-code.tistory.com/97
 	function _addToArray(uint _number) private {
 	    // 함수의 내용은 비어있다.
 	}
+<br/><br/>
 
 
 # Solidity의 개념 - 함수의 반환값(returns (string)) 및 함수 제어자(view, pure 등)
@@ -125,6 +136,7 @@ https://merrily-code.tistory.com/97
  	   return a * b;
 	}
 - pure 함수는 읽는 것도 하지 않고 단지 함수에 전달된 인자값에 따라 반환값이 달라진다.
+<br/><br/>
 
 
 # Solidity의 개념 - keccak256
@@ -133,11 +145,13 @@ https://merrily-code.tistory.com/97
 - 아래와 같이 문자열을 16진수로 해싱할 수 있다
 	//6e91ec6b618bb462a4a6ee5aa2cb0e9cf30f7a052bb467b0ba58b8748c00d2e5
 	keccak256("aaaab");
+<br/><br/>
 
 
 # Solidity의 개념 - 형변환
 - string인 변수(숫자이긴 해야함, 아래는 16진수 해시값)를 아래와 같이 uint 형식으로 변환할 수 있다.
 	uint(keccak256("aaaab"));
+<br/><br/>
 
 
 # Solidity의 개념 - 이벤트
@@ -152,6 +166,7 @@ https://merrily-code.tistory.com/97
  	   IntegersAdded(_x, _y, result);
  	   return result;
 	}
+<br/><br/>
 
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=e2e4e3&height=130)
