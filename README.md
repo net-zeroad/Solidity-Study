@@ -1,7 +1,16 @@
-# Solidity-Study
-
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Solidity-Study&fontAlignY=40&fontSize=100&desc=&descAlignY=65&animation=twinkling)
 
 # Solidity란?
+- 스마트 컨트랙트 프로그래밍 언어로, 컴파일하여 *ByteCode를 생성한다.
+- ByteCode : 트랜잭션의 data로 저장되며, 스마트 컨트랙트 실행 시 사용된다.
+
+
+# Solidity Prettier 설정방법
+0. solidity 확장 프로그램 설치(검정색 버전)
+1. solidity 확장 프로그램의 settings.json 에서 아래의 설정을 해주어야 함
+   "prettier.documentSelectors": ["**/*.sol"]
+2. 프로젝트에 플러그인 설치
+   npm i -D prettier-plugin-solidity
 
 
 # Solidity 코드를 컴파일하는 방법
@@ -143,3 +152,6 @@ https://merrily-code.tistory.com/97
  	   IntegersAdded(_x, _y, result);
  	   return result;
 	}
+
+
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=e2e4e3&height=130)
