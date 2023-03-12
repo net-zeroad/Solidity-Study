@@ -214,4 +214,34 @@ https://merrily-code.tistory.com/97
 
 
 
+# Solidity의 개념 - Msg.sender
+- 좀비 소유자를 추척하는 등의 매핑을 이용할 때 사용할 수 있다.
+- msg.sender는 모든 솔리디티 함수에서 이용 가능한 전역 변수들 중 하나이다.
+  - 솔리디티에서 함수 실행은 항상 외부 호출을 통하여 시작된다.
+  - 보통 해당 컨트랙트를 배포할 때 msg.sender가 쓰이는 것 같다. (혜림)
+- msg.sender는 현재 함수를 호출한 사람 혹은 스마트 컨트랙트의 주소를 가리킨다.
+- 예시) msg.sender를 이용하고 mapping을 업데이트 하는 코드
+```
+	mapping (address => uint) favoriteNumber;
+
+	function setMyNumber(uint _myNumber) public {
+	  // - msg.sender 에 대해 _myNumber 가 저장되도록 favoriteNumber 매핑을 업데이트한다.
+ 	  favoriteNumber[msg.sender] = _myNumber;
+ 	  // - 데이터를 저장하는 구문은 배열로 데이터를 저장할 때와 동일하다 
+	}
+
+	function whatIsMyNumber() public view returns (uint) {
+	  // - msg.sender의 주소에 저장된 값을 불러온다 
+	  // - sender가 `setMyNumber`을 아직 호출하지 않았다면 반환값은 `0`이 될 것이다
+	  return favoriteNumber[msg.sender];
+	}
+```
+- 누구나 위의 setMyNumber 함수를 호출하여 본인의 주소와 연결된 uint를 저장할 수 있다.
+- 어찌 되었든, msg.sender를 활용하면 우리는 이더리움 블록체인의 보안성을 이용할 수 있게 된다.
+  즉, 누군가 다른 사람의 데이터를 변경하려면 해당 이더리움 주소와 관련된 개인키를 훔치는 것 
+  밖에 다른 방법이 없어진다.
+<br/><br/>
+
+
+
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=e2e4e3&height=130)
