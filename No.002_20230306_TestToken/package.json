@@ -1,0 +1,18 @@
+{
+  "name": "no.002_20230306_testtoken",
+  "version": "1.0.0",
+  "description": "![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Test-Token&fontAlignY=40&fontSize=100&desc=&descAlignY=65&animation=twinkling)\r - blockchain7 수업 89일차\r <br/><br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^5.8.0"
+  },
+  "devDependencies": {
+    "prettier-plugin-solidity": "^1.1.3"
+  }
+}
